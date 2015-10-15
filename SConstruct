@@ -11,3 +11,4 @@ bin_sources = ["hello.c"]
 env.Program(target=bin_target, source=bin_sources, parse_flags="-I. -L. -lhello")
 
 env.Install(dir="/usr/local/lib", source=libhello)
+env.Alias("install", ["/usr/local/lib"])
